@@ -296,12 +296,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Download Button Handler ──
-    const downloadButtons = document.querySelectorAll('a[href="seu-app.apk"]');
+    const downloadButtons = document.querySelectorAll('a[href$=".apk"]');
     downloadButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            // If no real file exists, show a notification
-            // Remove this block when you have a real APK file
-            e.preventDefault();
+        btn.addEventListener('click', () => {
             showToast('O download do yadoT.apk começará em instantes!');
         });
     });
